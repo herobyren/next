@@ -1,0 +1,20 @@
+{
+  "name": "my-base-app",
+  "version": "1.0.0",
+  "description": "electron 项目",
+  "homepage": "https://github.com/herobyren/next#readme",
+  "bugs": {
+    "url": "https://github.com/herobyren/next/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herobyren/next.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
