@@ -19,6 +19,14 @@ const createWindow = function () {
 // 作为其 ready 事件的专用监听器，这样可以避免直接监听 .on 事件带来的一些问题
 app.whenReady().then(function () {
     createWindow();
+
+    // 监听 app 模组的 activate 事件,
+    // 如果没有任何打开(open) 的 BrowserWindow, 调用您已有的 createWindow() 方法新建一个。
+    app.on('activate', function () {
+        if (BrowserWindow.getAllWindows().length === 0) {
+            createWindow();
+        }
+    });
 });
 
 // 关闭所有窗口时退出应用 (Windows & Linux)
