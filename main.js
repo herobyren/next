@@ -20,3 +20,11 @@ const createWindow = function () {
 app.whenReady().then(function () {
     createWindow();
 });
+
+// 关闭所有窗口时退出应用 (Windows & Linux)
+app.on('window-all-closed', function () {
+    // 通过检查 Node.js 的 process.platform 变量, 您可以针对特定平台运行特定代码
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
+});
