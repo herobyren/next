@@ -5,11 +5,16 @@
 // BrowserWindow 这个模块创建和管理 app 的窗口。
 // 为了在编写 TypeScript 代码时进行更好的类型检查, 您可以选择从 electron/main 导入主进程模块。
 const { app, BrowserWindow } = require('electron/main');
+const path = require('node:path');
 
 const createWindow = function () {
     const win = new BrowserWindow({
         width: 800,
-        height: 600
+        height: 600,
+        // 为了将脚本附在渲染进程上, 在 BrowserWindow 构造器中使用 webPreferences.preload 传入脚本的路径。
+        webPreferences: {
+            preload: path.join(__dirname, 'preload.js')
+        }
     });
 
     win.loadFile('index.html');
