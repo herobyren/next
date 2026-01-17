@@ -11,9 +11,9 @@
     "url": "git+https://github.com/herobyren/next.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "herobyren",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
