@@ -43,5 +43,18 @@ module.exports = {
       [FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: true,
       [FuseV1Options.OnlyLoadAppFromAsar]: true
     })
+  ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'herobyren',
+          name: 'electron'
+        },
+        prerelease: false,
+        draft: true
+      }
+    }
   ]
 };
